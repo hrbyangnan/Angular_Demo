@@ -1,0 +1,10 @@
+<input type="test" [(ngModel)]="keyword" (keyup.enter)="add()" > <button (click)="add()" >添加</button>
+<hr/>
+<h4>todoList</h4>
+<ul>
+  <li *ngFor="let item of todoList; let key = index">{{item}} <button (click)="toDoneList(key)">Down</button> <button (click)="delete(key)">X</button></li>
+</ul>
+<h4>doneList</h4>
+<ul>
+  <li *ngFor="let item of doneList; let key = index">{{item}} <button (click)="toTodoList(key)">Up</button> <button (click)="deleteFromDone(key)">X</button></li>
+</ul>
